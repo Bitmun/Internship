@@ -6,140 +6,201 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
-  <div class="header-container">
-    <div class="header">
-      <img src="/images/spring-logo.png" />
-      <!-- <div class="topnav">
-        <button class="dropbtn">
-          Why Spring
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </div> -->
-      <div class="burger-icon">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-    </div>
-  </div>
   <body>
-    <div class="main-container">
-      <div class="main">
+    <header class="header-container">
+      <div class="header-wrapper">
+        <div class="header">
+          <img src="/images/spring-logo.png" />
+          <nav class="navigation">
+            <ul>
+              <li class="dropdown">
+                <a href="#">Why Spring</a>
+                <ul class="dropdown-menu">
+                  <li><p>Submenu 1</p></li>
+                  <li><p>Submenu 2</p></li>
+                  <li><p>Submenu 3</p></li>
+                  <li><p>Submenu 4</p></li>
+                  <li><p>Submenu 5</p></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">Learn</a>
+                <ul class="dropdown-menu">
+                  <li><p>Submenu 1</p></li>
+                  <li><p>Submenu 2</p></li>
+                  <li><p>Submenu 3</p></li>
+                  <li><p>Submenu 4</p></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">Projects</a>
+                <ul class="dropdown-menu">
+                  <li><p>Submenu 1</p></li>
+                  <li><p>Submenu 2</p></li>
+                  <li><p>Submenu 3</p></li>
+                  <li><p>Submenu 4</p></li>
+                  <li><p>Submenu 5</p></li>
+                  <li><p>Submenu 6</p></li>
+                  <li><p>Submenu 7</p></li>
+                  <li><p>Submenu 8</p></li>
+                  <li><p>Submenu 9</p></li>
+                  <li><p>Submenu 10</p></li>
+                  <li><p>DEVELOPMENT TOOLS</p></li>
+                  <li><p>Submenu 11</p></li>
+                  <li><p>Submenu 12</p></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">Academy</a>
+                <ul class="dropdown-menu">
+                  <li><p>Submenu 1</p></li>
+                  <li><p>Submenu 2</p></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">Solutions</a>
+                <ul class="dropdown-menu">
+                  <li><p>Submenu 1</p></li>
+                  <li><p>Submenu 2</p></li>
+                  <li><p>Submenu 3</p></li>
+                  <li><p>Submenu 4</p></li>
+                  <li><p>Submenu 5</p></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">Community</a>
+                <ul class="dropdown-menu">
+                  <li><p>Submenu 1</p></li>
+                  <li><p>Submenu 2</p></li>
+                  <li><p>Submenu 3</p></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="burger-icon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main-wrapper">
+      <article class="main">
         <h1>Projects</h1>
-        <div class="description">
+        <span class="description">
           From configuration to security, web apps to big data — whatever the
           infrastructure needs of your application may be, there is a Spring
           Project to help you build it. Start small and use just what you
           need—Spring is modular by design.
+        </span>
+      </article>
+      <div class="blocks-wrapper">
+        <div class="blocks-section">
+          <div class="block-container">
+            <article class="block-wrapper">
+              <a class="block">
+                <div class="image-container">
+                  <img src="https://spring.io/img/projects/spring-boot.svg" />
+                </div>
+                <div class="block-text-container">
+                  <h1>Spring Boot</h1>
+                  <p>
+                    Takes an opinionated view of building Spring applications
+                    and gets you up and running as quickly as possible.
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="block-container">
+            <article class="block-wrapper">
+              <a class="block">
+                <div class="image-container">
+                  <img
+                    src="https://spring.io/img/projects/spring-framework.svg?v=2"
+                  />
+                </div>
+                <div class="block-text-container">
+                  <h1>Spring Framework</h1>
+                  <p>
+                    Provides core support for dependency injection, transaction
+                    management, web apps, data access, messaging, and more.
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="block-container">
+            <article class="block-wrapper">
+              <a class="block">
+                <div class="image-container">
+                  <img src="https://spring.io/img/projects/spring-data.svg" />
+                </div>
+                <div class="block-text-container">
+                  <h1>Spring Data</h1>
+                  <p>
+                    Provides a consistent approach to data access – relational,
+                    non-relational, map-reduce, and beyond.
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="block-container">
+            <article class="block-wrapper">
+              <a class="block">
+                <div class="image-container">
+                  <img src="https://spring.io/img/projects/spring-cloud.svg" />
+                </div>
+                <div class="block-text-container">
+                  <h1>Spring Cloud</h1>
+                  <p>
+                    Provides a set of tools for common patterns in distributed
+                    systems. Useful for building and deploying microservices.
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="block-container">
+            <article class="block-wrapper">
+              <a class="block">
+                <div class="image-container">
+                  <img
+                    src="https://spring.io/img/projects/spring-data-flow.svg"
+                  />
+                </div>
+                <div class="block-text-container">
+                  <h1>Spring Cloud Data Flow</h1>
+                  <p>
+                    Provides an orchestration service for composable data
+                    microservice applications on modern runtimes.
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="block-container">
+            <article class="block-wrapper">
+              <a class="block">
+                <div class="image-container">
+                  <img
+                    src="https://spring.io/img/projects/spring-security.svg"
+                  />
+                </div>
+                <div class="block-text-container">
+                  <h1>Spring Security</h1>
+                  <p>
+                    Provides an orchestration service for composable data
+                    microservice applications on modern runtimes.
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
         </div>
       </div>
-      <div class="blocks-section">
-        <div class="block-container">
-          <article class="block-wrapper">
-            <a class="block">
-              <div class="image-container">
-                <img src="https://spring.io/img/projects/spring-boot.svg" />
-              </div>
-              <div class="block-text-container">
-                <h1>Spring Boot</h1>
-                <p>
-                  Takes an opinionated view of building Spring applications and
-                  gets you up and running as quickly as possible.
-                </p>
-              </div>
-            </a>
-          </article>
-        </div>
-        <div class="block-container">
-          <article class="block-wrapper">
-            <a class="block">
-              <div class="image-container">
-                <img
-                  src="https://spring.io/img/projects/spring-framework.svg?v=2"
-                />
-              </div>
-              <div class="block-text-container">
-                <h1>Spring Framework</h1>
-                <p>
-                  Provides core support for dependency injection, transaction
-                  management, web apps, data access, messaging, and more.
-                </p>
-              </div>
-            </a>
-          </article>
-        </div>
-        <div class="block-container">
-          <article class="block-wrapper">
-            <a class="block">
-              <div class="image-container">
-                <img src="https://spring.io/img/projects/spring-data.svg" />
-              </div>
-              <div class="block-text-container">
-                <h1>Spring Data</h1>
-                <p>
-                  Provides a consistent approach to data access – relational,
-                  non-relational, map-reduce, and beyond.
-                </p>
-              </div>
-            </a>
-          </article>
-        </div>
-        <div class="block-container">
-          <article class="block-wrapper">
-            <a class="block">
-              <div class="image-container">
-                <img src="https://spring.io/img/projects/spring-cloud.svg" />
-              </div>
-              <div class="block-text-container">
-                <h1>Spring Cloud</h1>
-                <p>
-                  Provides a set of tools for common patterns in distributed
-                  systems. Useful for building and deploying microservices.
-                </p>
-              </div>
-            </a>
-          </article>
-        </div>
-        <div class="block-container">
-          <article class="block-wrapper">
-            <a class="block">
-              <div class="image-container">
-                <img
-                  src="https://spring.io/img/projects/spring-data-flow.svg"
-                />
-              </div>
-              <div class="block-text-container">
-                <h1>Spring Cloud Data Flow</h1>
-                <p>
-                  Provides an orchestration service for composable data
-                  microservice applications on modern runtimes.
-                </p>
-              </div>
-            </a>
-          </article>
-        </div>
-        <div class="block-container">
-          <article class="block-wrapper">
-            <a class="block">
-              <div class="image-container">
-                <img src="https://spring.io/img/projects/spring-security.svg" />
-              </div>
-              <div class="block-text-container">
-                <h1>Spring Security</h1>
-                <p>
-                  Provides an orchestration service for composable data
-                  microservice applications on modern runtimes.
-                </p>
-              </div>
-            </a>
-          </article>
-        </div>
-      </div>
-    </div>
+    </main>
   </body>
 </html>
