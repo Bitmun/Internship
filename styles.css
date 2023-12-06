@@ -238,7 +238,7 @@ nav {
     align-items: center;
     justify-content: center;
     padding-left: 1rem;
-    padding-right: 3rem;
+    padding-right: 1rem;
     box-shadow: 0 8px 8px hsla(0,0%,4%,.1), 0 0 0 1px hsla(0,0%,4%,.1);
     animation: 0.3s show ease;
   }
@@ -265,6 +265,6 @@ nav {
   }
 
   .blocks-section {
-    max-width: 1100px;
+    max-width: 1000px;
   }  
 }
