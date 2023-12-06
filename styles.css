@@ -83,6 +83,8 @@ h1 {
   background-color: #ebf2f2;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .block-container {
@@ -116,4 +118,15 @@ h1 {
   height: 60px;
 }
 
+@media screen and (min-width: 800px) {
+  .blocks-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
+@media screen and (min-width: 900px) {
+  .burger-icon {
+    display: none;
+  }
+}
