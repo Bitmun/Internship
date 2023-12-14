@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="index.js"></script>
     <title>Document</title>
   </head>
   <body>
     <header class="header-container">
       <div class="header-wrapper">
         <div class="header">
+          <ul id="mySidepanel" class="sidepanel">
+            <a class="closebtn" onclick="closeNav()">&times;</a>
+          </ul>
           <img src="/images/spring-logo.png" />
           <nav class="navigation">
             <ul>
@@ -77,7 +81,7 @@
               </li>
             </ul>
           </nav>
-          <div class="burger-icon">
+          <div class="burger-icon" onclick="openNav()">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
