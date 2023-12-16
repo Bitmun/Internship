@@ -5,6 +5,8 @@ body {
   line-height: 1.5;
   margin: 0;
   overflow-x: hidden; 
+  
+
 }
 
 img {
@@ -103,7 +105,7 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .line {
@@ -168,7 +170,11 @@ nav {
 
 .blocks-wrapper {
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebf2f2;
 }
+
 
 .block-container:hover {
   transform: translateY(-10px);
@@ -349,4 +355,29 @@ nav {
 .inner-burger-wrapper a {
   font-size: 1.2rem;
   padding: 0.2rem 0;
+}
+
+
+.search-input {
+  margin-top: 5vh;
+  padding: 12px 10px;
+  width: 60vw;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: x-large;
+}
+
+.search-form {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.is-empty {
+  display: flex;
+  font-size: xx-large;
+  justify-content: center;
+  align-items: center;
 }
