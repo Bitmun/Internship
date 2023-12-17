@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack && echo '/* /index.html  200' | cat >dist/_redirects"
+    "build": "npx webpack --mode production && echo /* /index.html  200 > dist\\_redirects"
   },
   "author": "",
   "license": "ISC",
