@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="header-wrapper">
+        <div class="header">
+          <ul id="side-panel" class="sidepanel">
+            <a class="closebtn" id="closebtn">&times;</a>
+          </ul>
+          <img src="/images/spring-logo.png" />
+          <nav class="navigation">
+            <ul class="navigation-ul" id="navigation-ul"></ul>
+          </nav>
+          <div class="burger-icon" id="burger-icon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main-wrapper">
+      <article class="main">
+        <h1>Projects</h1>
+        <span class="description">
+          From configuration to security, web apps to big data — whatever the
+          infrastructure needs of your application may be, there is a Spring
+          Project to help you build it. Start small and use just what you
+          need—Spring is modular by design.
+        </span>
+      </article>
+    </main>
+    <div class="blocks-wrapper">
+      <form class="search-form">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Search..."
+          class="search-input"
+        />
+      </form>
+      <div class="blocks-section" id="blocks-section"></div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
