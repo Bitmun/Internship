@@ -1,52 +1,12 @@
 import './styles.css';
 import { searchItemsList, headerItems } from './data';
-
-let delayTimer;
-
-const appendBlock = (blockData) => {
-  const blocksSection = document.getElementById('blocks-section');
-  const { title, desc, img } = blockData;
-  const container = document.createElement('div');
-
-  container.classList.add('block-container');
-  container.innerHTML = `
-  <article class="block-wrapper">
-  <a class="block">
-    <div class="image-container">
-      <img src="${img}" />
-    </div>
-    <div class="block-text-container">
-      <h1>${title}</h1>
-      <p>
-        ${desc}
-      </p>
-    </div>
-  </a>
-</article>
-  `;
-  blocksSection.appendChild(container);
-};
-
-const appendHeaderEl = (el) => {
-  const { text, submenu } = el;
-  let ul = document.getElementById('navigation-ul');
-  const topLi = document.createElement('li');
-  topLi.classList.add('dropdown');
-  topLi.innerHTML = `
-  <a href="#">${text}</a>
-  `;
-  const innerUl = document.createElement('ul');
-  innerUl.classList.add('dropdown-menu');
-  submenu.map((el) => {
-    innerUl.innerHTML += `
-      <li>
-        <p>${el}</p>  
-      </li>
-    `;
-  });
-  topLi.appendChild(innerUl);
-  ul.appendChild(topLi);
-};
+import {
+  appendBlock,
+  appendHeaderEl,
+  handleResize,
+  appendSidePanelEl,
+} from './utils/domManipulations';
+import { inputFunction } from './utils/searchFunctions';
 
 document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', handleResize);
@@ -97,61 +57,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
-const appendSidePanelEl = (item) => {
-  const sidePanel = document.getElementById('side-panel');
-  const mainStr = document.createElement('li');
-  mainStr.classList.add('sidepanel-top');
-  mainStr.innerHTML = `
-  <a>${item.text}</a>
-  `;
-  const innerUl = document.createElement('ul');
-  item.submenu.map((el) => {
-    innerUl.innerHTML += `<li>${el}</li>`;
-  });
-  innerUl.classList.add('is-closed');
-  sidePanel.appendChild(mainStr);
-  sidePanel.appendChild(innerUl);
-};
-
-function handleResize() {
-  var windowWidth = window.innerWidth;
-  if (windowWidth >= 900) {
-    closeNav();
-  }
-}
-
-function closeNav() {
-  let sidePanel = document.getElementById('side-panel');
-  sidePanel.classList.remove('sidepanel-opened');
-}
-
-function inputFunction() {
-  const inputElement = document.getElementById('search-input');
-  const query = inputElement.value.trim().toLowerCase();
-  delay(() => {
-    searchItems(query);
-  }, 300);
-}
-
-function searchItems(query) {
-  const filteredItems = searchItemsList.filter(
-    (item) =>
-      item.title.toLowerCase().includes(query) ||
-      item.desc.toLowerCase().includes(query)
-  );
-  let parent = document.getElementById('blocks-section');
-  if (filteredItems.length === 0) {
-    parent.innerHTML = 'No results';
-    parent.classList.add('is-empty');
-  } else {
-    parent.classList.remove('is-empty');
-    parent.innerHTML = '';
-    filteredItems.map((item) => appendBlock(item));
-  }
-}
-
-function delay(func, delay) {
-  clearTimeout(delayTimer);
-  delayTimer = setTimeout(func, delay);
-}
